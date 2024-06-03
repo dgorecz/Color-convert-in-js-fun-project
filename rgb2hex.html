@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RGB to HEX converter</title>
+    <style>
+        *{
+            text-align: center;
+        }
+        p{
+            font-size: 25px;
+        }
+        #r, #g, #b{
+            font-size: 50px;
+        }
+        #r{
+            color: darkred;
+            background-color:lightcoral ;
+        }
+        #g{
+            color: green;
+            background-color: greenyellow;
+        }
+        #b{
+            color: blue;
+            background-color: lightblue;
+        }
+        #result{
+            text-align: center;
+            font-size: 120px;
+        }
+        #convert{
+            font-size: 40px;
+        }
+    </style>
+    <script>
+        function convert(){
+            var r = parseInt(document.getElementById("r").value);
+            var g = parseInt(document.getElementById("g").value);
+            var b = parseInt(document.getElementById("b").value);
+
+            document.show.result.value = ("#"+r.toString(16)+g.toString(16)+b.toString(16));
+        }
+    </script>
+</head>
+<body>
+    <input type="number" id="r" min="0" max="255" size="4">
+    <br>
+    <input type="number" id="g" min="0" max="255" size="4">
+    <br>
+    <input type="number" id="b" min="0" max="255" size="4">
+
+    <br> <br>
+    <button onclick="convert()" id="convert">&nbsp;convert&nbsp;</button>
+    <br> <br>
+
+    <p>result:</p>
+    <form name="show">
+        <input type="text" name="result" id="result" readonly size="10">
+    </form>
+</body>
+</html>
+<!--omg hiiii!!-->
